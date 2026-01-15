@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seamstress Portfolio</title>
+
+<style>
+
+    /* ------------------- GLOBAL STYLES ------------------- */
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body{
+
+        color:#222;
+      
+    }
+
+    /* ------------------- HEADER ------------------- */
+    header{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        gap:4rem;
+        padding:2rem 1.5rem;
+        font-size:2rem;
+        font-weight:600;
+         background-color:whitesmoke;
+    }
+
+    header a{
+        text-decoration:none;
+        color:#111;
+        transition:.3s;
+    }
+
+    header a:hover{
+        opacity:.7;
+    }
+
+    /* ------------------- HERO SECTION ------------------- */
+    .hero{
+        text-align:center;
+        padding:5rem 1rem 7rem;
+        backdrop-filter: blur(2px);
+                background: url('https://i.imgur.com/vw7UnY3.jpeg'); /* placeholder pattern */
+        background-size:cover;
+        background-repeat: repeat;
+        height: 100vh;
+          background-repeat: no-repeat;
+        background-position: center center;
+        background-blend-mode: darken;
+
+
+    }
+
+    .hero h1{
+        font-size:70px;
+        font-family: "Brush Script MT", cursive;
+        color:#1e2a78;
+        margin-top:150px;
+        text-align: center;
+
+
+        }
+
+    .hero p{
+        font-size:30px;
+        font-style:italic;
+        margin-bottom:3rem;
+        color: white;
+
+    }
+
+    .buttons{
+        display:flex;
+        justify-content:center;
+        gap:2rem;
+        flex-wrap:wrap;
+    }
+
+    .buttons a{
+        background:#e64545;
+        padding:1rem 2rem;
+        border-radius:50px;
+        color:white;
+        text-decoration:none;
+        font-size:1.1rem;
+        transition:.3s;
+    }
+
+    .buttons a:hover{
+        background:#c92f2f;
+    }
+ /* ---------- CONTAINER ---------- */
+    .about-section{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:3rem;
+        padding:4rem 1rem;
+        flex-wrap:wrap;
+        background:url('https://i.imgur.com/LQlOi1N.jpeg');
+        background-size: 240px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+      /* ---------- CARD STYLES ---------- */
+    .card{
+        background:#ff4545;
+        padding:2rem;
+        border-radius:35px;
+        max-width:420px;
+        width:50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+     /* ---------- IMAGE CARD ---------- */
+    .card.image-card{
+        padding:0;
+        overflow:hidden;
+        border-radius:35px;
+    }
+
+    .image-card img{
+        width:100%;
+        display:block;
+        border-radius:0;
+        animation: zoomIn 1.5s ease forwards;
+        
+    }
+/* ---------- ZOOM IN ANIMATION ---------- */
+    @keyframes zoomIn {
+        0%{
+            transform:scale(0.8);
+            opacity:0;
+        }
+        100%{
+            transform:scale(1);
+            opacity:1;
+        }
+    }
+
+    /* ---------- TEXT CARD ---------- */
+    .card h2{
+        text-align:center;
+        font-size:2rem;
+        margin-bottom:1rem;
+        color:#111;
+    }
+
+    .card p{
+        line-height:1.7;
+        font-size:1.1rem;
+        color:white;
+    }
+      /* --- GRID LAYOUT --- */
+    .offers {
+  padding: 4rem 6%;
+  background: #fff;
+  text-align: center;
+}
+
+.offers h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #222;
+}
+
+/* 3 by 2 grid */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.offer-card {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom black label */
+.offer-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Hover effect */
+.offer-card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+     /* --- TITLE BAR --- */
+    .title-bar{
+        background:black;
+        padding:1rem;
+    }
+
+    .title-bar p{
+        color:white;
+        font-size:1.1rem;
+        font-weight:600;
+    }
+
+ h2{
+        text-align:center;
+        font-size:2.5rem;
+        font-weight:700;
+        margin-bottom:2rem;
+        text-decoration: underline;
+    }
+
+    /* GRID */
+    .testimonials{
+        max-width:1100px;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap:2rem;
+    }
+
+    /* CARD */
+    .review-card{
+        background:white;
+        padding:1.8rem;
+        border-radius:15px;
+        box-shadow:0 6px 14px rgba(0,0,0,0.12);
+        transition:.4s ease;
+        text-align:center;
+    }
+
+    /* Hover animation */
+    .review-card:hover{
+        transform:scale(1.03);
+        box-shadow:0 10px 20px rgba(0,0,0,0.18);
+    }
+
+    /* Silhouette image */
+    .avatar{
+        width:90px;
+        height:90px;
+        margin:auto;
+        margin-bottom:1rem;
+        background:black;
+        -webkit-mask:url('https://i.imgur.com/5qKpA3i.png') center/contain no-repeat;
+        mask:url('https://i.imgur.com/5qKpA3i.png') center/contain no-repeat;
+
+    }
+
+    /* Text */
+    .review-text{
+        font-size:1.05rem;
+        margin-bottom:1rem;
+        font-weight:500;
+    }
+
+    /* Stars */
+    .stars{
+        color:#f7a000;
+        font-size:1.6rem;
+        margin-bottom:1rem;
+    }
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:#000;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:3rem 1.5rem;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://i.imgur.com/uD8KvKi.jpeg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.contact-container{
+    max-width:600px;
+    width:100%;
+    margin:auto;
+}
+
+.contact-container h1{
+    font-size:3rem;
+    margin-bottom:2rem;
+    text-align:center;
+}
+
+/* ===== FORM ===== */
+.contact-form label{
+    display:block;
+    font-size:1.4rem;
+    margin-bottom:.5rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:.9rem 1rem;
+    margin-bottom:1.5rem;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    font-size:1rem;
+}
+
+.contact-form textarea{
+    min-height:120px;
+    resize:none;
+}
+
+/* ===== BUTTON ===== */
+.contact-form button{
+    background:#f7941d;
+    color:black;
+    border:none;
+    padding:1rem 2.5rem;
+    border-radius:40px;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.contact-form button:hover{
+    background:#ffae42;
+    transform:scale(1.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background: #3e3e3e;
+  color: #ccc;
+  padding: 3rem 6% 1.5rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.footer h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  color: #fff;
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.socials span {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.socials span:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Newsletter */
+.subscribe {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.subscribe button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.office-title {
+  margin-top: 1rem;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+    .contact-container h1{
+        font-size:2.2rem;
+    }
+
+    .contact-form label{
+        font-size:1.1rem;
+    }
+
+    /* ------------------- RESPONSIVE ------------------- */
+    @media(max-width:768px){
+        header{
+            gap:1.5rem;
+            font-size:1.3rem;
+        }
+
+        .hero h1{
+            font-size:2.3rem;
+        }
+
+        .hero p{
+            font-size:1.1rem;
+        }
+         .about-section{
+            padding:2rem 1rem;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<!-- ------------------- HEADER ------------------- -->
+<header>
+    <a href="Home page.html">Home</a>
+    <a href="About me page.html">About us</a>
+    <a href="Contact us page.html">Contact</a>
+    <a href="What i offer page.html">What i offer</a>
+</header>
+
+<!-- ------------------- HERO SECTION ------------------- -->
+<section class="hero">
+    <h1>Custom Design Tailored To You</h1>
+    <p>Bringing your ideas to life with precision, passion, and style.</p>
+
+    <div class="buttons">
+        <a href="#">View work</a>
+        <a href="https://wa.me/qr/LCBX7PD4LROND1">Book a consultation</a>
+    </div>
+</section>
+
+<!-- ---------------- ABOUT SECTION ---------------- -->
+<section class="about-section">
+
+    <!-- IMAGE -->
+    <div class="card image-card">
+        <img src="https://i.imgur.com/wV22IhH.jpeg" alt="Seamstress">
+    </div>
+
+    <!-- TEXT -->
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+            natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Donec quam felis, ultricies nec.
+        </p>
+    </div>
+
+</section>
+
+
+
+<section class="offers">
+  <h2>What I Offer</h2>
+
+  <div class="offer-grid">
+    <div class="offer-card">
+      <img src="https://i.imgur.com/xJJbhac.jpeg" alt="Men's tailoring">
+      <div class="offer-text">Men’s Tailoring</div>
+    </div>
+
+    <div class="offer-card">
+      <img src="https://i.imgur.com/VvaJQFy.jpeg" alt="Kids wear">
+      <div class="offer-text">Kids Wear</div>
+    </div>
+
+    <div class="offer-card">
+      <img src="https://i.imgur.com/sj9BRJC.jpeg" alt="Casual outfits">
+      <div class="offer-text">Casual Outfits</div>
+    </div>
+
+    <div class="offer-card">
+      <img src="https://i.imgur.com/cWvDGUW.jpeg" alt="Women fashion">
+      <div class="offer-text">Women Fashion</div>
+    </div>
+
+    <div class="offer-card">
+      <img src="https://i.imgur.com/MmLV49k.jpeg" alt="Traditional wear">
+      <div class="offer-text">Traditional Wear</div>
+    </div>
+
+    <div class="offer-card">
+      <img src="https://i.imgur.com/X1SDexH.jpeg" alt="Custom designs">
+      <div class="offer-text">Custom Designs</div>
+    </div>
+  </div>
+</section>
+
+<section>   
+<!-- CARD 1 -->
+    <div class="review-card">
+        <div class="avatar"></div>
+        <p class="review-text">“She tailored my wedding dress perfectly.”</p>
+        <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="review-card">
+        <div class="avatar"></div>
+        <p class="review-text">“She did my suit within 1 day. Amazing work!”</p>
+        <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="review-card">
+        <div class="avatar"></div>
+        <p class="review-text">“She saved my kid’s pants. Truly a life-saver!”</p>
+        <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="review-card">
+        <div class="avatar"></div>
+        <p class="review-text">“She made custom running pants for me!”</p>
+        <div class="stars">★★★★★</div>
+    </div>
+
+</section>
+
+<section class="contact-section">
+    <div class="contact-container">
+
+        <h1>Contact us</h1>
+
+        <form class="contact-form">
+            <label>Name:</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Your email">
+
+            <label>Phone (optional):</label>
+            <input type="tel" placeholder="Your phone number">
+
+            <label>Message</label>
+            <textarea placeholder="Tell us what you need..."></textarea>
+
+            <button type="submit">Book appointment</button>
+        </form>
+
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <h2>Gazelle exquisite</h2>
+      <div class="socials">
+        <span>f</span>
+        <span>t</span>
+        <span>in</span>
+        <span>ig</span>
+        <span>tb</span>
+      </div>
+    </div>
+
+    <!-- Solutions -->
+    <div class="footer-col">
+      <h4>Bridals</h4>
+      <ul>
+        <li>Custom dressmaking</li>
+        <li>Clothing alterations (hemming, resizing, tapering)</li>
+        <li>Bridal gown tailoring</li>
+      </ul>
+    </div>
+
+    <!-- Industries -->
+    <div class="footer-col">
+      <h4>Bespoke</h4>
+      <ul>
+        <li>Custom skirts & blouses</li>
+        <li>Custom pants & shorts</li>
+        <li>Formal wear sewing</li>
+        <li>Uniform sewing (school, work, church)</li>
+        <li>Zipper replacement</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li>Reviews</li>
+        <li>Terms & Condition</li>
+        <li>Disclaimer</li>
+        <li>Site Map</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter + Location -->
+    <div class="footer-col newsletter">
+      <h4>Stay Connected</h4>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter Email Address">
+        <button>Subscribe</button>
+      </div>
+
+      <h4 class="office-title">Office Location</h4>
+      <p>
+        Los Angeles<br>
+        Office 90, Sky High Tower, New A Ring Road, Los Angeles
+      </p>
+      <p>
+        Delhi<br>
+        Office 150B, Behind Sana Gate Char Bhuj Tower, Station Road, Delhi
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © All Rights Reserved 2019-2020<br>
+    Designed by CodingTuting.com
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+

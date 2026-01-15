@@ -1,0 +1,250 @@
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+ /* ------------------- HEADER ------------------- */
+    header{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        gap:4rem;
+        padding:2rem 1.5rem;
+        font-size:2rem;
+        font-weight:600;
+        background-color:whitesmoke;
+    }
+
+    header a{
+        text-decoration:none;
+        color:#111;
+        transition:.3s;
+    }
+
+    header a:hover{
+        opacity:.7;
+    }
+
+
+/* ===== CONTACT HERO ===== */
+.contact-hero{
+    min-height:100vh;
+    padding:4rem 1.5rem;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.contact-wrapper{
+    max-width:1200px;
+    margin:auto;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+}
+
+/* ===== LEFT TEXT ===== */
+.contact-info h1{
+    font-size:3rem;
+    margin-bottom:1rem;
+}
+
+.contact-info p{
+    font-size:1.1rem;
+    line-height:1.7;
+    max-width:500px;
+}
+
+.info-box{
+    margin-top:2rem;
+}
+
+.info-box p{
+    margin-bottom:.6rem;
+    font-size:1rem;
+}
+
+/* ===== FORM ===== */
+.contact-form{
+    background:rgba(0,0,0,0.65);
+    padding:2.5rem;
+    border-radius:20px;
+}
+
+.contact-form label{
+    display:block;
+    margin-bottom:.4rem;
+    font-size:1rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:.9rem 1rem;
+    margin-bottom:1.2rem;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:1rem;
+}
+
+.contact-form textarea{
+    resize:none;
+    min-height:120px;
+}
+
+/* ===== BUTTON ===== */
+.contact-form button{
+    background:#f7941d;
+    color:#000;
+    border:none;
+    padding:1rem 2.5rem;
+    border-radius:40px;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.contact-form button:hover{
+    background:#ffae42;
+    transform:scale(1.05);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-extra{
+    background:#fff;
+    color:#111;
+    padding:4rem 1.5rem;
+}
+
+.about-extra h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:2rem;
+}
+
+.about-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:2rem;
+}
+
+.about-card{
+    padding:2rem;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    border-top:5px solid #f7941d;
+}
+
+.about-card h3{
+    margin-bottom:.8rem;
+}
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info h1{
+        font-size:2.4rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- ------------------- HEADER ------------------- -->
+<header>
+    <a href="Home page.html">Home</a>
+    <a href="About me page.html">About us</a>
+    <a href="Contact us page.html">Contact</a>
+    <a href="What i offer page.html">What i offer</a>
+</header>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-hero">
+    <div class="contact-wrapper">
+
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p>
+                Have a design in mind or need a perfect fit?
+                Get in touch today and let’s create something
+                beautiful just for you.
+            </p>
+
+            <div class="info-box">
+                <p><strong>Location:</strong> Available by appointment</p>
+                <p><strong>Hours:</strong> Mon – Sat | 9am – 6pm</p>
+                <p><strong>Response time:</strong> Within 24 hours</p>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <label>Name:</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Your email">
+
+            <label>Phone (optional):</label>
+            <input type="tel" placeholder="Your phone number">
+
+            <label>Message</label>
+            <textarea placeholder="Tell us what you need..."></textarea>
+
+            <button type="submit">Book appointment</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- ===== EXTRA ABOUT FEATURES ===== -->
+<section class="about-extra">
+    <h2>Why Choose Us</h2>
+
+    <div class="about-grid">
+        <div class="about-card">
+            <h3>Expert Craftsmanship</h3>
+            <p>
+                Every stitch is done with precision,
+                ensuring comfort, durability, and elegance.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>Custom Designs</h3>
+            <p>
+                From everyday wear to special events,
+                each outfit is made uniquely for you.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>Perfect Fit Guaranteed</h3>
+            <p>
+                We focus on accurate measurements
+                and adjustments for a flawless finish.
+            </p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Seamstress</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+body{
+    background:#f6ebc9;
+}
+
+ /* ------------------- HEADER ------------------- */
+    header{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        gap:4rem;
+        padding:2rem 1.5rem;
+        font-size:2rem;
+        font-weight:600;
+         background-color:whitesmoke;
+    }
+
+    header a{
+        text-decoration:none;
+        color:white;
+        transition:.3s;
+    }
+
+    header a:hover{
+        opacity:.7;
+        color: red;
+        text-decoration: underline;
+    }
+
+/* ===== ABOUT HERO SECTION ===== */
+.about-hero{
+    padding:4rem 1.5rem;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #f6ebc9,
+            #f6ebc9 30px,
+            #2f4f8f 30px,
+            #2f4f8f 40px,
+            #f44 40px,
+            #f44 50px
+        );
+}
+
+.about-wrapper{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:3rem;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* ===== IMAGE CARD ===== */
+.about-image{
+    background:#ff3b3b;
+    padding:2rem;
+    border-radius:40px;
+    flex:1;
+    min-width:280px;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:200px 200px 20px 20px;
+    display:block;
+}
+
+/* ===== TEXT CARD ===== */
+.about-text{
+    background:#ff3b3b;
+    padding:2.5rem;
+    border-radius:40px;
+    flex:1;
+    min-width:280px;
+    color:white;
+}
+
+.about-text h1{
+    font-size:2.5rem;
+    margin-bottom:1.2rem;
+    color:#111;
+}
+
+.about-text p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+/* ===== STATS SECTION ===== */
+.stats{
+    background:white;
+    padding:4rem 1.5rem;
+}
+
+.stats-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:2rem;
+    text-align:center;
+}
+
+.stat{
+    padding:2rem;
+    border-radius:15px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.1);
+}
+
+.stat h2{
+    font-size:2.2rem;
+    color:#ff3b3b;
+}
+
+.stat p{
+    font-size:1rem;
+    margin-top:.5rem;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills{
+    padding:4rem 1.5rem;
+    background:#fafafa;
+}
+
+.skills h2{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:2rem;
+}
+
+.skills-list{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:1.5rem;
+}
+
+.skill{
+    background:white;
+    padding:1.5rem;
+    border-left:6px solid #ff3b3b;
+    border-radius:10px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* ===== VALUES SECTION ===== */
+.values{
+    background:#111;
+    color:white;
+    padding:4rem 1.5rem;
+    text-align:center;
+}
+
+.values h2{
+    font-size:2.2rem;
+    margin-bottom:1.5rem;
+}
+
+.values p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.footer {
+  background: #3e3e3e;
+  color: #ccc;
+  padding: 3rem 6% 1.5rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.footer h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  color: #fff;
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.socials span {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.socials span:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Newsletter */
+.subscribe {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.subscribe button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.office-title {
+  margin-top: 1rem;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:#000;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:3rem 1.5rem;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1557200134-90327ee9fafa");
+    background-size:cover;
+    background-position:center;
+    color:white;
+
+}
+
+.contact-container{
+    max-width:600px;
+    width:100%;
+     margin:auto;
+}
+
+.contact-container h1{
+    font-size:3rem;
+    margin-bottom:2rem;
+    text-align:center;
+}
+
+/* ===== FORM ===== */
+.contact-form label{
+    display:block;
+    font-size:1.4rem;
+    margin-bottom:.5rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:.9rem 1rem;
+    margin-bottom:1.5rem;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    font-size:1rem;
+}
+
+.contact-form textarea{
+    min-height:120px;
+    resize:none;
+}
+
+/* ===== BUTTON ===== */
+.contact-form button{
+    background:#f7941d;
+    color:black;
+    border:none;
+    padding:1rem 2.5rem;
+    border-radius:40px;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.contact-form button:hover{
+    background:#ffae42;
+    transform:scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+    .contact-container h1{
+        font-size:2.2rem;
+    }
+
+    .contact-form label{
+        font-size:1.1rem;
+    }
+}
+</style>
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .about-text h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- ------------------- HEADER ------------------- -->
+<header>
+    <a href="Home page.html">Home</a>
+    <a href="About me page.html">About us</a>
+    <a href="Contact us page.html">Contact</a>
+    <a href="What i offer page.html">What i offer</a>
+</header>
+
+
+<!-- ===== ABOUT HERO ===== -->
+<section class="about-hero">
+    <div class="about-wrapper">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Seamstress at work">
+        </div>
+
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+    <div class="stats-grid">
+        <div class="stat">
+            <h2>10+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <h2>500+</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+            <h2>100%</h2>
+            <p>Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills">
+    <h2>What I Specialize In</h2>
+    <div class="skills-list">
+        <div class="skill">Custom Dresses & Gowns</div>
+        <div class="skill">Suit Tailoring & Alterations</div>
+        <div class="skill">Wedding & Event Wear</div>
+        <div class="skill">Children’s Clothing</div>
+        <div class="skill">Repairs & Adjustments</div>
+        <div class="skill">Traditional & Modern Styles</div>
+    </div>
+</section>
+
+<!-- ===== VALUES ===== -->
+<section class="values">
+    <h2>My Promise</h2>
+    <p>
+        Every stitch is made with care, precision, and passion.
+        I believe clothing should fit perfectly, feel comfortable,
+        and make you confident wherever you go.
+    </p>
+</section>
+<div>
+<section class="contact-section">
+    <div class="contact-container">
+
+        <h1>Contact us</h1>
+
+        <form class="contact-form">
+            <label>Name:</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Your email">
+
+            <label>Phone (optional):</label>
+            <input type="tel" placeholder="Your phone number">
+
+            <label>Message</label>
+            <textarea placeholder="Tell us what you need..."></textarea>
+
+            <button type="submit">Book appointment</button>
+        </form>
+
+    </div>
+</section>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <h2>iTechnology</h2>
+      <div class="socials">
+        <span>f</span>
+        <span>t</span>
+        <span>in</span>
+        <span>ig</span>
+        <span>tb</span>
+      </div>
+    </div>
+
+    <!-- Solutions -->
+    <div class="footer-col">
+      <h4>Solution</h4>
+      <ul>
+        <li>Enterprise App Development</li>
+        <li>Android App Development</li>
+        <li>iOS App Development</li>
+      </ul>
+    </div>
+
+    <!-- Industries -->
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <ul>
+        <li>Healthcare</li>
+        <li>Sports</li>
+        <li>Ecommerce</li>
+        <li>Construction</li>
+        <li>Club</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li>Reviews</li>
+        <li>Terms & Condition</li>
+        <li>Disclaimer</li>
+        <li>Site Map</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter + Location -->
+    <div class="footer-col newsletter">
+      <h4>Stay Connected</h4>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter Email Address">
+        <button>Subscribe</button>
+      </div>
+
+      <h4 class="office-title">Office Location</h4>
+      <p>
+        Los Angeles<br>
+        Office 90, Sky High Tower, New A Ring Road, Los Angeles
+      </p>
+      <p>
+        Delhi<br>
+        Office 150B, Behind Sana Gate Char Bhuj Tower, Station Road, Delhi
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © All Rights Reserved 2019-2020<br>
+    Designed by CodingTuting.com
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
